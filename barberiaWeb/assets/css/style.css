@@ -1,11 +1,56 @@
 .card-img {
-    object-fit: cover;
-    height: 250px; /* Ajusta el tamaño de las imágenes para un diseño más compacto */
+    object-fit: contain;
+    height: 250px; 
 }
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 .card:hover {
-    transform: translateY(-5px); /* Efecto de elevación en hover */
+    transform: translateY(-5px); 
 }
+
+
+
+
+  /* Fondo oscuro para el footer */
+  .footer-barber {
+    background-color: #222;
+    padding: 20px 0;
+  }
+
+  /* Títulos en colores de barbería */
+  .footer-title-blue {
+    color: #1e3a8a; /* Azul oscuro */
+  }
+  .footer-title-red {
+    color: #b91c1c; /* Rojo fuerte */
+  }
+
+  /* Links personalizados */
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-link:hover {
+    color: #b91c1c; /* Rojo al pasar el mouse */
+  }
+
+  /* Copyright */
+  .footer-copyright {
+    background-color: #1e3a8a;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-image-container img {
+    border-radius: 50%;
+    border: 2px solid #1e3a8a; /* Azul barbería */
+  }
