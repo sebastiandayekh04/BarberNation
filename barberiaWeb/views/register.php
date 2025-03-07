@@ -10,36 +10,35 @@
     <div class="card p-4 bg-dark text-white" style="width: 22rem;">
         <h2 class="card-title text-center">Regístrate</h2>
         <form method="post">
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="username" class="form-label">Nombre:</label>
                 <input type="text" name="username" id="username" class="form-control" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="apellido" class="form-label">Apellido:</label>
                 <input type="text" name="apellido" id="apellido" class="form-control" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="email" class="form-label">Correo:</label>
                 <input type="email" name="email" id="email" class="form-control" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="telephone" class="form-label">Número telefónico:</label>
                 <input type="number" name="telephone" id="telephone" class="form-control">
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="password" class="form-label">Contraseña:</label>
                 <input type="password" name="password" id="password" class="form-control">
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="tipoUsuario" class="form-label">Eres:</label>
                 <select name="tipoUsuario" id="tipoUsuario" class="form-select" required>
                     <option value="barbero">Barbero</option>
-                    <option value="barberoDueño">Dueño de Barbería</option>
                     <option value="usuario">Usuario</option>
                 </select>
             </div>
             <div class="text-center mb-3">
-                <a href="./register.php" class="text-white text-decoration-underline">Si ya estás registrado, entra aquí</a>
+                <a href="./login.php" class="text-white text-decoration-underline">Si ya estás registrado, entra aquí</a>
             </div>
             <button type="submit" class="btn btn-primary w-100">Registrarse</button>
         </form>

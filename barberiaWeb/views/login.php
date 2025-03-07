@@ -22,7 +22,7 @@
             </div>
             
             <div class="text-center mb-3">
-                <a href="./login.php" class="text-white text-decoration-underline">Si no estás registrado, entra aquí</a>
+                <a href="./register.php" class="text-white text-decoration-underline">Si no estás registrado, entra aquí</a>
             </div>
             <button type="submit" class="btn btn-primary w-100">Entrar</button>
         </form>

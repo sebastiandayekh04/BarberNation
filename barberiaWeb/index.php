@@ -10,6 +10,7 @@ require_once './config/db_config.php' ;
     <title>BarberNationBCN</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/9d719ae6a3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <?php 
@@ -23,8 +24,8 @@ require_once 'views/header.php' ;
                 <div class="card bg-dark text-white h-100">
                     <img src="https://i.pinimg.com/736x/43/57/07/435707ccf07d44e5a308aab52bf1826f.jpg" class="card-img" alt="corte prueba">
                     <div class="card-img-overlay">
-                        <h5 class="card-title">Card Title 1</h5>
-                        <p class="card-text">A short description of this card's content.</p>
+                        <h5 class="card-title">Burst fade</h5>
+                        <p class="card-text">(Desgradado), [mohicano],</p>
 
                     </div>
                 </div>
@@ -33,8 +34,8 @@ require_once 'views/header.php' ;
                 <div class="card bg-dark text-white h-100">
                     <img src="https://i.pinimg.com/736x/7f/f4/16/7ff416263a6844f75acddd0b1aff86bb.jpg" class="card-img" alt="corte prueba">
                     <div class="card-img-overlay">
-                        <h5 class="card-title">Card Title 2</h5>
-                        <p class="card-text">Another example with some additional content.</p>
+                        <h5 class="card-title">Mohicano con diseño de cruz</h5>
+                        <p class="card-text">(degradado), (diseño), [mohicano]</p>
                     </div>
                 </div>
             </div>
@@ -57,7 +58,7 @@ require_once 'views/header.php' ;
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 mb-4">
-                <div class="card bg-dark text-white h-100">
+                <div class="card bg-dark text-white ">
                     <img src="https://i.pinimg.com/736x/ce/e6/9d/cee69d5d1fd3b2de6f32e869dea2f692.jpg" class="card-img" alt="corte prueba">
                     <div class="card-img-overlay">
                         <h5 class="card-title">Card Title 5</h5>
@@ -111,6 +112,7 @@ require_once 'views/header.php' ;
 
 
 <?php require_once 'views/footer.php' ; ?>  
+<script src="https://kit.fontawesome.com/9d719ae6a3.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

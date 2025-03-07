@@ -1,16 +1,23 @@
-.card-img {
-    object-fit: contain;
-    height: 250px; 
+.card-img-container {
+  width: 100%;          /* Hace que la imagen ocupe todo el ancho */
+  height: 250px;        /* Altura fija para mantener consistencia */
+  overflow: hidden;     /* Evita que la imagen se salga del contenedor */
 }
+
+.card-img-top {
+  width: 100%;          /* Se ajusta al ancho del contenedor */
+  height: 70%;         /* Se ajusta al alto del contenedor */
+  object-fit: cover;    /* Mantiene la proporción y recorta si es necesario */
+}
+
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
+
 .card:hover {
-    transform: translateY(-5px); 
+  transform: translateY(-5px);
 }
-
-
 
 
   /* Fondo oscuro para el footer */
@@ -54,3 +61,63 @@
     border-radius: 50%;
     border: 2px solid #1e3a8a; /* Azul barbería */
   }
+
+/* Estilos generales para el navbar */
+.custom-navbar {
+  background-color: #1e3a8a; /* Azul oscuro */
+}
+
+/* Estilo del logo */
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Contenedor de iconos */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* SVG ICONOS - Darles color blanco */
+.custom-svg {
+  fill: white;  /* Aplica color blanco */
+  stroke: white; /* Para los que usen stroke */
+}
+
+/* Buscador más ancho y estilizado */
+.search-container {
+  width: 50%; /* Ocupa la mitad del navbar */
+}
+
+.custom-search {
+  border: 2px solid white;
+  background-color: white;
+  color: #000;
+}
+
+.custom-search::placeholder {
+  color: #555;
+}
+
+/* Botón de búsqueda */
+.custom-button {
+  background-color: #dc3545; /* Rojo */
+  border-color: #dc3545;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #b02a37; /* Rojo más oscuro */
+}
+
+/* Imagen de perfil */
+.profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
