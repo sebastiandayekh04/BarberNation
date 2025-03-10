@@ -7,14 +7,18 @@
           <img src="../assets/images/img_logo.jpg" alt="Logo" width="45" height="30"> 
         </a>
         <div class="icon-container me-2">
+          <a href="../index.php">
           <svg width="30" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <a href="../index.php"><i class="fa-solid fa-house"></i></a>
+          <i class="fa-solid fa-house"></i>
           </svg>
+        </a>
         </div>
         <div class="icon-container">
+          <a href="../views/explorer.php">
           <svg width="30" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <a href="../views/explorer.php"><i class="fa-solid fa-compass"></i></a> 
+          <i class="fa-solid fa-compass"></i>
           </svg>
+          </a> 
         </div>
       </div>
 
