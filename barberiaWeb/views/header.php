@@ -32,11 +32,11 @@
 
       <!-- Imagen de Perfil -->
       <div class="profile-image-container">
-        <a href="../views/editarPerfil.php"><img src="../assets/images/profile.jpg" alt="Perfil" class="profile-image"></a>
+        <a href="../views/editarPerfil.php"><img src="../assets/images/profile.jpg" alt="Perfil" class="profile-image card-img-top "></a>
       </div>
     </div>
   </nav>
-</header>
+</header >
 
 <!-- Vincular el CSS -->
 <link rel="stylesheet" href="styles.css">

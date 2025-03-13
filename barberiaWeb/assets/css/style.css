@@ -1,14 +1,19 @@
-.card-img-container {
-  width: 100%;          /* Hace que la imagen ocupe todo el ancho */
-  height: 250px;        /* Altura fija para mantener consistencia */
-  overflow: hidden;     /* Evita que la imagen se salga del contenedor */
+.card-img-top {
+  width: 100%;         /* Se adapta al ancho de la tarjeta */
+  height: 250px;       /* Ajusta esto según el tamaño que prefieras */
+  object-fit: contain; /* O usa cover si quieres que recorte los bordes */
 }
 
-.card-img-top {
-  width: 100%;          /* Se ajusta al ancho del contenedor */
-  height: 70%;         /* Se ajusta al alto del contenedor */
-  object-fit: cover;    /* Mantiene la proporción y recorta si es necesario */
+.card {
+  height: auto; /* Para que no se estire demasiado */
 }
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Asegura que el texto esté en la parte inferior */
+}
+
 
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -50,7 +55,7 @@
     padding: 10px 0;
     text-align: center;
   }
-
+  /*Header logo imagen*/
   .icon-container {
     display: flex;
     align-items: center;
@@ -121,3 +126,4 @@
   border-radius: 50%;
   border: 2px solid white;
 }
+
