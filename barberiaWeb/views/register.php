@@ -1,3 +1,95 @@
+<?php
+session_start();
+require_once 'config.php';
+
+
+// Definir la carpeta dinde se guardarán las fotos
+$uploadDir = 'uploads/';
+
+$error = "";
+$email_error = false;
+
+$name = "";
+$surname = "";
+$email = "";
+$age = "";
+// 0. Comprobar si el formulario ha sido enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // 1. Recoger datos del formulario
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    //1.2 procesar el archivo de imagen
+    if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
+    //obtener información del archivo
+    $fileTmpPath = $_FILES['avatar']['tmp_name']; //ruta temporal en el servidor
+    $fileName = $_FILES['avatar']['name']; //nombre original del archivo
+
+    //separar el nombre del archivo y la extensión
+    $fileNameCmps = explode(".", $fileName); 
+    $fileExtension = strtolower(end($fileNameCmps)); //extensión del archivo
+
+    //definir las extensiones permitidas (solo imagenes)
+    $allowedfileExtensions = array('jpg', 'jpeg', 'png', 'gif');
+    if (in_array($fileExtension, $allowedfileExtensions)) {
+        //renombar el archivo para evitar duplicados (usamos md5 y time)
+        //$newFileName = md5(time() . $fileName) . '.' . $fileExtension;
+        $newFileName = md5(strtolower($email)) . '.' . $fileExtension;
+        //ruta final en la carpeta uploads
+        $dest_path = $uploadDir . $newFileName;
+        if (file_exists($dest_path)) {
+            $error = "Error: El correo ya existe.";
+            $email_error = true;
+        } else {
+            //mover el archivo de la carpeta temporal a la carpeta uploads
+            if (!move_uploaded_file($fileTmpPath, $dest_path)) {
+                $error = "Error: No se pudo mover al archivo a la carpeta de destino.";
+                //die('Error: No se pudo mover al archivo a la carpeta de destino.');
+            }
+        }
+    } else {
+        $error = "Error: Solo se permiten archivos de imagen (jpg, jpeg, png, gif).";
+        //die('Error: Solo se permiten archivos de imagen (jpg, jpeg, png, gif).');
+    }
+}
+if ($error === "") {
+    // 2. Cifrar la contraseña con password_hash
+    $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
+
+    // 3. Preparar la consulta antes de insertar para evitar SQL injection
+    $stmt = $mysqli->prepare(
+        "INSERT INTO USERS (name, surname, email, avatar, password, rol, age, date_register) 
+        VALUES (?, ?, ?, ?, ?, 'user', ?, NOW())"
+    );
+
+    // 4. Comprobar que la preparación de la consulta tuvo éxito
+    if (!$stmt) {
+        echo 'Error en la preparación de la consulta: ' . $mysqli->error;
+        //exit;
+    } else {
+        // 5. Bindear los parámetros
+        $stmt->bind_param('sssssi', $name, $surname, $email, $dest_path, $passwordHashed, $age);
+
+        // 6. Ejecutar la consulta
+        if ($stmt->execute()) {
+            header('Location: login.php');
+        } else {
+            echo 'Error al registrar el usuario: ' . $mysqli->error;
+        }
+    }
+    $stmt->close();
+} else {
+    echo '<b style="color:red">'.$error."</b>";
+}
+
+
+// 7. Cerrar la declaración
+$mysqli->close();
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

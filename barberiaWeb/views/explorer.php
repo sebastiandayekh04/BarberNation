@@ -1,6 +1,6 @@
 <?php 
-require_once '../config/db_config.php' ; 
-
+require_once '../views/header.php' ; 
+require_once 'config.php' ; 
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -14,23 +14,23 @@ require_once '../config/db_config.php' ;
 
     <style>
                      a {
-                    text-decoration: none; /* Elimina el subrayado azul */
-                    color: inherit; /* Mantiene el color original del texto */
+                    text-decoration: none; 
+                    color: inherit; 
                     }
 
                     a:hover {
-                    text-decoration: none; /* Asegura que tampoco aparezca al pasar el mouse */
+                    text-decoration: none; 
                      }
 
                     .card.custom-border {
-                        border: 2px solid #000; /* Borde negro */
+                        border: 2px solid #000;
                     }
                     
 
                     .card-img-top img {
                     width: 100%;
-                    height: 200px; /* Ajusta según tu diseño */
-                    object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+                    height: 200px;
+                    object-fit: cover;
                     }
 
                     .card {
@@ -40,7 +40,7 @@ require_once '../config/db_config.php' ;
                     }
 
                     .card-body {
-                    flex-grow: 1; /* Hace que el contenido crezca uniformemente */
+                    flex-grow: 1; 
                     }
 
 
@@ -48,10 +48,6 @@ require_once '../config/db_config.php' ;
     </style>
 </head>
 <body>
-<?php 
-require_once '../views/header.php' ; 
-?>  
-
 <main>
     <div class="container">
     <div class="container-fluid">
@@ -69,7 +65,7 @@ require_once '../views/header.php' ;
         <div class="row justify-content-center g-3">
             
             <div class="col-6 col-md-4 col-lg-3">
-            <a href="degradados.php">
+            <a href="pelo_largo.php">
                 <div class="card custom-border shadow-sm">
                     <img src="https://i.pinimg.com/736x/bd/64/7a/bd647a669fbb11898f459d3bf493793c.jpg" class="card-img-top" alt="corte prueba">
                     <div class="card-body text-center">
@@ -82,7 +78,7 @@ require_once '../views/header.php' ;
             
             
             <div class="col-6 col-md-4 col-lg-3">
-            <a href="degradados.php">
+            <a href="tintes.php">
                 <div class="card custom-border shadow-sm">
                     <img src="https://i.pinimg.com/736x/39/64/ec/3964ec244e64a03f8fa428965290086b.jpg" class="card-img-top" alt="corte prueba">
                     <div class="card-body text-center">
@@ -105,7 +101,7 @@ require_once '../views/header.php' ;
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-            <a href="degradados.php">
+            <a href="barbas.php">
                 <div class="card custom-border shadow-sm">
                     <img src="https://i.pinimg.com/736x/d5/3f/2a/d53f2ad4270def8a9b65cac2e451e086.jpg" class="card-img-top" alt="corte prueba">
                     <div class="card-body text-center">
@@ -116,7 +112,7 @@ require_once '../views/header.php' ;
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-            <a href="degradados.php">
+            <a href="cabello_diseño.php">
                 <div class="card custom-border shadow-sm">
                     <img src="https://i.pinimg.com/736x/3b/a4/53/3ba45348ba18e7baf21874fe31047923.jpg" class="card-img-top" alt="corte prueba">
                     <div class="card-body text-center">
@@ -128,7 +124,7 @@ require_once '../views/header.php' ;
             </div>
             
             <div class="col-6 col-md-4 col-lg-3">
-            <a href="degradados.php">
+            <a href="cortes_femeninos .php">
                 <div class="card custom-border shadow-sm">
                     <img src="https://i.pinimg.com/736x/1e/67/40/1e6740e4082aa6b4991943764672b15a.jpg" class="card-img-top" alt="corte prueba">
                     <div class="card-body text-center">

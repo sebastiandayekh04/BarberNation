@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once 'config.php'; 
+?>
+
 <header>
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid d-flex align-items-center">
@@ -38,5 +43,4 @@
   </nav>
 </header >
 
-<!-- Vincular el CSS -->
 <link rel="stylesheet" href="styles.css">
